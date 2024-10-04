@@ -1,0 +1,88 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(24, 24, 24);
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+}
+
+@font-face {
+  src: url('/fonts/Exo2-VariableFont_wght.ttf');
+  font-family: Exo;
+}
+
+@font-face {
+  src: url('/fonts/Varela-Regular.ttf');
+  font-family: Varela;
+}
+
+@font-face {
+  src: url('/fonts/Ultra-Regular.ttf');
+  font-family: Ultra;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  --bg: rgb(24, 24, 24);
+  background-color: var(--bg);
+  color: white;
+  font-family: Exo;
+  /*overflow-x: hidden;*/
+}
+
+.navbar {
+  width: 100%;
+  padding: 28px 8%;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  align-items: center;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.nav-logo {
+  width: 18px;
+}
+
+.nav-logo > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  font-size: .8rem;
+}
+
+
+.nav-items > span {
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-items {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+}
